@@ -667,9 +667,9 @@ declare namespace WebdriverIO {
             name: string,
             func: AddCommandFn<false>
         ): void;
-        
+
         /**
-         * The `$$` command is a short way to call the [`findElements`](/docs/api/webdriver.html#findelements) command in order
+         * The `$$` command is a short way to call the [`findElements`](/docs/api/webdriver#findelements) command in order
          * to fetch multiple elements on the page similar to the `$$` command from the browser scope. The difference when calling
          * it from an element scope is that the driver will look within the children of that element.
          */
@@ -678,7 +678,7 @@ declare namespace WebdriverIO {
         ): ElementArray;
 
         /**
-         * The `$` command is a short way to call the [`findElement`](/docs/api/webdriver.html#findelement) command in order
+         * The `$` command is a short way to call the [`findElement`](/docs/api/webdriver#findelement) command in order
          * to fetch a single element on the page similar to the `$` command from the browser scope. The difference when calling
          * it from an element scope is that the driver will look within the children of that element. You can also pass in an object as selector
          * where the object contains a property `element-6066-11e4-a52e-4f735466cecf` with the value of a reference
@@ -817,7 +817,7 @@ declare namespace WebdriverIO {
          * Get the text content from a DOM-element. Make sure the element
          * you want to request the text from [is interactable](http://www.w3.org/TR/webdriver/#interactable)
          * otherwise you will get an empty string as return value. If the element is disabled or not
-         * visible and you still want to receive the text content use [getHTML](https://webdriver.io/docs/api/element/getHTML.html)
+         * visible and you still want to receive the text content use [getHTML](https://webdriver.io/docs/api/element/getHTML)
          * as a workaround.
          */
         getText(): string;
@@ -1048,7 +1048,7 @@ declare namespace WebdriverIO {
          */
         calls: Matches[];
 
-        
+
         /**
          * Abort the request with one of the following error codes:
          * `Failed`, `Aborted`, `TimedOut`, `AccessDenied`, `ConnectionClosed`,
@@ -1143,9 +1143,9 @@ declare namespace WebdriverIO {
             name: string,
             func: (selector: string) => HTMLElement | HTMLElement[] | NodeListOf<HTMLElement>
         ): void
-        
+
         /**
-         * The `$$` command is a short way to call the [`findElements`](/docs/api/webdriver.html#findelements) command in order
+         * The `$$` command is a short way to call the [`findElements`](https://webdriver.io/docs/api/webdriver#findelements) command in order
          * to fetch multiple elements on the page. It returns an array with element results that will have an
          * extended prototype to call action commands without passing in a selector. However if you still pass
          * in a selector it will look for that element first and call the action on that element.
@@ -1155,7 +1155,7 @@ declare namespace WebdriverIO {
         ): ElementArray;
 
         /**
-         * The `$` command is a short way to call the [`findElement`](/docs/api/webdriver.html#findelement) command in order
+         * The `$` command is a short way to call the [`findElement`](https://webdriver.io/docs/api/webdriver#findelement) command in order
          * to fetch a single element on the page. It returns an object that with an extended prototype to call
          * action commands without passing in a selector. However if you still pass in a selector it will look
          * for that element first and call the action on that element. You can also pass in an object as selector
@@ -1254,7 +1254,7 @@ declare namespace WebdriverIO {
         /**
          * Pauses execution for a specific amount of time. It is recommended to not use this command to wait for an
          * element to show up. In order to avoid flaky test results it is better to use commands like
-         * [`waitForExist`](/docs/api/element/waitForExist.html) or other waitFor* commands.
+         * [`waitForExist`](https://webdriver.io/docs/api/element/waitForExist) or other waitFor* commands.
          */
         pause(
             milliseconds: number
@@ -1324,7 +1324,7 @@ declare namespace WebdriverIO {
         /**
          * Sets the timeouts associated with the current session, timeout durations control such
          * behaviour as timeouts on script injection, document navigation, and element retrieval.
-         * For more information and examples, see [timeouts guide](https://webdriver.io/docs/timeouts.html#selenium-timeouts).
+         * For more information and examples, see [timeouts guide](https://webdriver.io/docs/timeouts#selenium-timeouts).
          */
         setTimeout(
             timeouts: Timeouts
@@ -1366,7 +1366,7 @@ declare namespace WebdriverIO {
 
         /**
          * Uploads a file to the Selenium Standalone server or other browser driver
-         * (e.g. Chromedriver) by using the [`file`](/docs/api/selenium.html#file) command.
+         * (e.g. Chromedriver) by using the [`file`](https://webdriver.io/docs/api/selenium#file) command.
          * _Note:_ that this command is only supported if you use a Selenium Hub or
          * Chromedriver directly.
          */
@@ -1415,7 +1415,7 @@ declare namespace WebdriverIO {
 
     interface Config extends Options, Omit<WebDriver.Options, "capabilities">, Hooks {
          /**
-         * internal usage only. To run in watch mode see https://webdriver.io/docs/watcher.html
+         * internal usage only. To run in watch mode see https://webdriver.io/docs/watcher
          */
         watch?: boolean;
         runnerEnv?: Record<string, any>;

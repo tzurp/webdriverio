@@ -199,7 +199,7 @@ export const WDIO_DEFAULTS: Record<string, DefaultPropertyType> = {
                 throw new Error(
                     'a reporter should be either a string in the format "wdio-<reportername>-reporter" ' +
                     'or a function/class. Please see the docs for more information on custom reporters ' +
-                    '(https://webdriver.io/docs/customreporter.html)'
+                    '(https://webdriver.io/docs/customreporter)'
                 )
             }
 
